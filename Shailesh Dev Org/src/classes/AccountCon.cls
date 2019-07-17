@@ -20,7 +20,12 @@ public class AccountCon{
         
     }
     
-      
+public String Industry2{
+     get;
+        set;
+        
+    }
+    
         
     public list<Account> getAccountCon(){
     list<Account> ac = new list<Account>();
