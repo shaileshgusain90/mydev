@@ -19,6 +19,9 @@ public class accconhierarchy {
    
     public class accountWrap{
         public String helloString {get;set;}
+                public String helloString2 {get;set;}
+        public String helloString3 {get;set;}
+
         public account oAccount{get;set;}
         public boolean isSelected{get;set;}
         public List<contactWrap> contactset{get;set;}
