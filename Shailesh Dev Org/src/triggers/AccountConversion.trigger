@@ -3,7 +3,7 @@ trigger AccountConversion on Lead (after insert) {
     
     for(lead md : trigger.new){
     
-
+List<user> = [Select name from user ];
 
 Database.LeadConvert lc = new Database.LeadConvert();
 lc.setLeadId(md.id);
