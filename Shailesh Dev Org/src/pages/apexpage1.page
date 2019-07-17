@@ -1,0 +1,10 @@
+<apex:page controller="aggregateclass">
+
+<apex:pageBlock title="emp">
+
+<apex:outputText value="{!fun}"/>
+</apex:pageBlock>
+
+   
+       
+</apex:page>

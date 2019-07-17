@@ -1,0 +1,24 @@
+<apex:page controller="ContWrapper">
+<apex:pageBlock >
+<apex:form >
+<apex:pageBlockTable value="{!Cont}" var="co">
+<apex:column >
+<apex:inputCheckbox value="{!co.selectCon}"/>
+<apex:commandButton value="Delete" action="{!DeleteCont}" disabled="{!DeteteWrap}">
+<apex:param id="prId" value="{!co.con.id}" assignTo="{!contId}"/>
+
+
+</apex:commandButton>
+</apex:column>
+<apex:column value="{!co.con.name}"/>
+<apex:column value="{!co.con.phone}"/>
+<apex:column value="{!co.con.email}"/>
+<apex:column value="{!co.con.AccountId}"/>
+
+
+</apex:pageBlockTable>
+
+
+</apex:form>
+</apex:pageBlock>
+</apex:page>

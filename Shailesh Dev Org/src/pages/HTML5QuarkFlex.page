@@ -1,0 +1,17 @@
+<apex:page showHeader="false" standardStylesheets="false" controller="HTML5RemoteExtensions" >
+
+<script>
+	function filterQuarks(spin,mass) {
+		HTML5RemoteExtensions.filterQuarks(spin,mass,updateResults);
+	}
+	
+	function updateResults(result, event) {
+		console.log(result.length);
+		flashObject.sendData(result);
+	}
+</script>
+
+	<H1>JavaScript Remoting with Flex</H1>
+	<apex:flash src="{!URLFOR($Resource.QuarkFlex, 'bin-release/Main.swf')}" height="700" width="700" />
+
+</apex:page>

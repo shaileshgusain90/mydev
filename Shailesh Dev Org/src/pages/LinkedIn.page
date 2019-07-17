@@ -1,0 +1,6 @@
+<apex:page controller="LinkedInIntegrationController">
+ <apex:form >
+ <apex:outputLink value="{!LinkedinData}">Authorize Me</apex:outputLink>
+ </apex:form>
+
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="Adwords">
+<apex:form >
+<apex:pageblock >
+<apex:commandButton value="auth code" action="{!driveAuth}"/>
+<apex:commandButton value="postthis" action="{!accessToken}"/>
+<apex:commandButton value="report" action="{!setup}"/>
+</apex:pageblock>
+
+</apex:form>
+
+ 
+</apex:page>

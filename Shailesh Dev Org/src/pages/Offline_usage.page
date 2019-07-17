@@ -1,0 +1,137 @@
+<apex:page standardController="Account" showHeader="false" sidebar="false" standardStylesheets="false"
+    docType="html-5.0" manifest="/apex/Manifest">
+    <link rel="stylesheet" href="{!URLFOR($Resource.gusainShailesh__css, '/css/appcache.css')}"/>
+       <link rel="stylesheet" href="{!URLFOR($Resource.gusainShailesh__css, '/css/styles.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.offlinejs, '/offline/offline.js')}"/>
+   
+    <script>
+ // page loaded
+jQuery(document).ready(function($) {
+
+    // form data saving
+    $("#mainform").submit(lib.Save);
+
+    // online/offline event handler
+    if (window.sessionStorage) {
+        lib.Net.ChangeStatus();
+        $(window).bind('online offline', lib.Net.ChangeStatus);
+    }
+    
+    // load data
+    lib.Load();
+
+});
+
+// online/offline library
+var lib = lib || {};
+
+lib.Net = function() {
+
+    var online = true;
+
+    // is browser online?
+    function Online() { return navigator.onLine; }
+    
+    // online/offline event
+    function ChangeStatus() {
+        if (online != Online()) {
+            online = Online();
+            var s = $("#status");
+            s.text(online ? "Online" : "Offline");
+            if (online) s.removeClass("offline");
+            else s.addClass("offline");
+        }
+    }
+    
+    return {
+        Online: Online,
+        ChangeStatus: ChangeStatus
+    };
+
+}();
+
+// save data online or offline
+lib.Save = function(e) {
+
+    e.preventDefault();
+    
+    if (lib.Net.Online() || !window.sessionStorage) {
+    
+        // save data online
+        alert("Data has been saved online.\n(But not in this demo!)");
+        
+    }
+    else {
+    
+        // save data offline
+        $("#mainform input").each(function(i) {
+            window.sessionStorage.setItem(this.id, this.value);
+        });
+        alert("Data has been saved offline.");
+
+    }
+
+};
+
+// load data online or offline
+lib.Load = function() {
+
+    if (lib.Net.Online() || !window.sessionStorage) {
+    
+        // load data online
+        alert("Currently online:\ndata could be loaded from server.");
+    
+    }
+    else {
+    
+        // load data offline
+        $("#mainform input").each(function(i) {
+            this.value = window.sessionStorage.getItem(this.id);
+        });
+        alert("Data has been loaded from offline store.");
+
+    }
+
+};
+    
+    </script>
+    
+    <head>
+    <title>Offline test page</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+</head>
+
+<body>
+
+<p id="status">Online</p>
+
+<h1>Offline test page</h1>
+<p>This page detects when the browser goes offline and stores data locally.</p>
+
+<form id="mainform" action="index.html" method="post">
+<fieldset>
+<legend>Update data</legend>
+
+<label>Data item 1: <input type="text" id="data1" name="data1" value="" /></label>
+<label>Data item 2: <input type="text" id="data2" name="data2" value="" /></label>
+<label>Data item 3: <input type="text" id="data3" name="data3" value="" /></label>
+
+<button type="submit">Save Data</button>
+
+</fieldset>
+</form>
+
+<p>Use File &gt; Work Offline in Firefox to switch online/offline modes.</p>
+<p><a href="index.html">Refresh the page</a> in offline mode to reload data from store.</p>
+
+<p>For more information, refer to the SitePoint article <a href="http://www.sitepoint.com/blogs/offline-web-application-tutorial"><em>How To Create an Offline Web Application</em></a> by <a href="http://www.sitepoint.com/articlelist/560/show-all-blogs/">Craig Buckler</a>.</p>
+
+<p>Please use the code as you wish at your own risk. It is provided as-is without warrranty of any kind.</p>
+
+
+</body>
+    
+    
+ 
+
+</apex:page>

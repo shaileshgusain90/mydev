@@ -1,0 +1,40 @@
+<apex:page standardController="Account" extensions="RedirectExtentions" showHeader="false" sidebar="false" standardStylesheets="false"
+    docType="html-5.0" manifest="/apex/Manifest" id="pgid">
+   
+    <link rel="stylesheet" href="{!URLFOR($Resource.gusainShailesh__css, '/css/styles.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.offlinejs, '/offline/jquery-1.4.min.js')}"/>    
+<apex:includeScript value="{!URLFOR($Resource.offlinejs, '/offline/offline.js')}"/>  
+<p id="status">Online</p>
+
+<h1>Offline test page</h1>
+<p>This page detects when the browser goes offline and stores data locally.</p>
+
+<apex:form id="mainform">
+<apex:actionFunction name="allData" action="{!saveThis}" >
+<apex:param name="name" value="" assignTo="{!names}"/> 
+<apex:param name="phone" value="" assignTo="{!phones}"  /> 
+</apex:actionFunction>
+<fieldset>
+<legend>Update data</legend>
+
+<label>ACCOUNT NAME: <apex:input type="text" id="data1"  value="{!names}" /></label>
+<label>PHONE NUMBER: <apex:input type="text" id="data2"  value="{!phones}" /></label>
+
+<input type="submit" value="Save" name="Save" />
+
+
+</fieldset>
+</apex:form>
+
+<p>Use File &gt; Work Offline in Firefox to switch online/offline modes.</p>
+<p><a href="index.html">Refresh the page</a> in offline mode to reload data from store.</p>
+
+<p>For more information, refer to the SitePoint article <a href="http://www.sitepoint.com/blogs/offline-web-application-tutorial"><em>How To Create an Offline Web Application</em></a> by <a href="http://www.sitepoint.com/articlelist/560/show-all-blogs/">Craig Buckler</a>.</p>
+
+<p>Please use the code as you wish at your own risk. It is provided as-is without warrranty of any kind.</p>
+
+<apex:includeScript value="{!URLFOR($Resource.offlinejs, '/offline/jquery-1.4.min.js')}"/>    
+<apex:includeScript value="{!URLFOR($Resource.offlinejs, '/offline/offline.js')}"/>    
+
+
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page controller="total">
+  T1: {!CurrentTotal1}<br/>
+  T2: {!CurrentTotal2} <br/>
+  <apex:form >
+    <apex:commandLink value="refresh"/>
+  </apex:form>
+</apex:page>

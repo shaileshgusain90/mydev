@@ -1,0 +1,94 @@
+<apex:page controller="PaypalProccessor" id="pgId">
+
+
+<apex:sectionHeader title="Paypal solution for salesforce" subtitle="Payment"/>
+<apex:form id="formId">
+<apex:pageBlock id="pgBlock">
+<apex:pageMessages ></apex:pageMessages>
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!isAllowed}" id="theblock">
+<apex:pageBlockSection columns="1">
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="First Name"></apex:outputLabel><apex:inputText title="First Name"  value="{!FirstName}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Last Name"></apex:outputLabel><apex:inputText title="Last Name" value="{!LastName}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Adress 1"></apex:outputLabel><apex:inputText title="Address 1" value="{!Addy1}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="State"></apex:outputLabel><apex:inputText title="Address 2" value="{!Addy2}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Country code"></apex:outputLabel><apex:inputText title="Country" value="{!Country}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Card Type"></apex:outputLabel><apex:selectList value="{!selectedCardType}" size="1">
+<apex:selectOptions value="{!cardtype}"></apex:selectOptions>
+                  </apex:selectList>
+ </apex:pageBlockSectionItem>
+ 
+ 
+ <apex:pageBlockSectionItem >                 
+ <apex:outputLabel value="Card No"></apex:outputLabel><apex:inputText value="{!cardNo}"/>
+ </apex:pageBlockSectionItem>
+ 
+ 
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Ex month"></apex:outputLabel><apex:selectList value="{!expMo}" size="1">
+<apex:selectOptions value="{!ExpMonth}"></apex:selectOptions>
+                  </apex:selectList>
+                  </apex:pageBlockSectionItem>
+                  
+                  
+                  <apex:pageBlockSectionItem >
+<apex:outputLabel value="Ex Year"></apex:outputLabel><apex:selectList value="{!expYe}" size="1">
+<apex:selectOptions value="{!Years}"></apex:selectOptions>
+                  </apex:selectList>
+                  </apex:pageBlockSectionItem>
+                  
+                  
+                  <apex:pageBlockSectionItem >
+<apex:outputLabel value="CVV"></apex:outputLabel><apex:inputText title="CVV no" value="{!CVV}"/>
+</apex:pageBlockSectionItem>
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="City"></apex:outputLabel><apex:inputText title="City" value="{!City}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Zip"></apex:outputLabel><apex:inputText title="Zip" value="{!zip}"/>
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+<apex:outputLabel value="Amount"></apex:outputLabel><apex:inputText title="Amount" value="{!Amount}"/>
+</apex:pageBlockSectionItem> 
+
+
+
+ <apex:pageBlockSectionItem >
+ <apex:outputLabel value=""></apex:outputLabel>
+  <apex:commandButton value="Make Payment" action="{!makePayement}" />
+ </apex:pageBlockSectionItem>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form> 
+
+ 
+</apex:page>

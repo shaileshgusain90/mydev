@@ -1,0 +1,40 @@
+<apex:page Controller="QuoteClass" tabStyle="opportunity">
+
+
+
+        <apex:form >
+    <apex:pageBlock title="Quotes" > 
+      <apex:pageBlockSection title="Quote Information" collapsible="false" >
+           
+          <apex:inputField value="{!Q.ExpirationDate}"/>
+      
+      
+      
+      
+      </apex:pageBlockSection>
+      <apex:pageBlockSection title="Totals" collapsible="false" >
+      
+      
+      
+      
+      </apex:pageBlockSection>
+       
+      <apex:pageBlockSection title="Prepared For" collapsible="false" >
+      
+      
+      
+      
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Address Information" collapsible="false" >
+      <apex:inputtext />
+      <apex:inputtext />
+      <apex:inputtext />
+      <apex:inputtext />
+      
+      
+      </apex:pageBlockSection>
+    
+     </apex:pageBlock>
+ </apex:form>
+</apex:page>

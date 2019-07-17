@@ -1,0 +1,30 @@
+39.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+02:00:45.0 (77772)|USER_INFO|[EXTERNAL]|00590000001ruUW|shailesh.gusain.sfdc@gmail.com|Pacific Standard Time|GMT-07:00
+02:00:45.29 (29035211)|USER_INFO|[EXTERNAL]|00590000001ruUW|shailesh.gusain.sfdc@gmail.com|Pacific Standard Time|GMT-07:00
+02:00:45.29 (29053321)|EXECUTION_STARTED
+02:00:45.29 (29057257)|CODE_UNIT_STARTED|[EXTERNAL]|VF: /apex/gusainShailesh__editApexPage.apexp
+02:00:45.29 (77455841)|CODE_UNIT_STARTED|[EXTERNAL]|VF Controller Save
+02:00:45.29 (77473180)|SYSTEM_MODE_ENTER|false
+02:00:45.29 (93080254)|VF_PAGE_MESSAGE|Cyclic page or component references '/apex/gusainShailesh__testingLightningAppPage' are not allowed
+02:00:45.29 (101107292)|CODE_UNIT_FINISHED|VF Controller Save
+02:00:45.29 (149306204)|VF_SERIALIZE_VIEWSTATE_BEGIN|
+02:00:45.29 (155784848)|VF_SERIALIZE_VIEWSTATE_END
+02:00:45.167 (167538447)|CUMULATIVE_LIMIT_USAGE
+02:00:45.167 (167538447)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+02:00:45.167 (167538447)|CUMULATIVE_LIMIT_USAGE_END
+
+02:00:45.29 (167593144)|CODE_UNIT_FINISHED|VF: /apex/gusainShailesh__editApexPage.apexp
+02:00:45.29 (169067132)|EXECUTION_FINISHED

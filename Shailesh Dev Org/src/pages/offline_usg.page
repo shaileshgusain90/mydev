@@ -1,0 +1,78 @@
+<apex:page applyBodyTag="false" >
+
+<!-- css -->
+<link rel="stylesheet" href="{!URLFOR($Resource.gusainShailesh__Offline_usage, '/offline_usage/bootstrap.min.css')}"/>
+
+<!--  -->
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/jquery-2.0.0.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/underscore-1.4.4.min.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/lodash.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/backbone.js')}"/>
+
+
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/cordova-2.3.0.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/forcetk.mobilesdk.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/cordova.force.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/smartsync.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/handlebars-v1.3.0.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.Offline_usage, '/offline_usage/bootstrap.min.js')}"/>
+
+<body>
+    <script>
+    var app = {
+    models: {},
+    views: {}
+   
+}
+  // Models
+app.models.User = Force.SObject.extend({
+    sobjectType: "User",
+    fieldlist: ["Id", "FirstName", "LastName", "SmallPhotoUrl", "Title", "Email", "MobilePhone","City"]
+});
+
+app.models.ContactCollection = Force.SObjectCollection.extend({
+    model:app.ContactCollection
+});
+
+app.ContactCollection = Force.SObjectCollection.extend({  
+      model : app.ContactModel,  
+      fieldlist : ["Id", "Name", "FirstName", "LastName", "Owner.Name", "LastModifiedBy.Name", "LastModifiedDate"],  
+      config : function(){  
+           if(app.OfflineTracker.get("isOnline")){
+            alert('He;;p');   
+                return {type : "soql",  
+                          query : "SELECT " + this.fieldlist.join(",") + " FROM Contact"};  
+           }else{ 
+           alert('He;;p'); 
+                return {type:"cache",  
+                          cacheQuery : {  
+                                    indexPath:"Id",  
+                                    queryType:"range"  
+                               },  
+                          };  
+           }  
+      },  
+      cache: function() { return new Force.StoreCache("contacts", [ {path:"Id", type:"string"} ]);},  
+      cacheForOriginals: function() { return new Force.StoreCache("original-contacts");}  
+ });  
+
+app.Tracker = Backbone.Model.extend({  
+      initialize : function(){  
+           var that = this; 
+            alert('i am onlie');   
+           this.set("isOnline", navigator.onLine);  
+           document.addEventListener("offline", function(){  
+                that.set("isOnline" ,false);
+               
+           }, false);  
+           document.addEventListener("online", function(){  
+                that.set("isOnline", true);  
+           }, false);  
+      }  
+ });  
+   </script>
+  </body>
+
+
+
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="Trans" showHeader="false">
+<apex:form >
+  <apex:pageBlock title="multiply">
+  <apex:pageBlockButtons >
+   <apex:commandButton value="go" action="{!delid}"/>
+    </apex:pageBlockButtons>
+  <apex:inputText value="{!multiply1}"/>
+  <apex:inputText value="{!multiply2}"/>
+  <apex:outputText value="{!val1}"/>
+  <apex:outputText value="{!val2}"/>
+  </apex:pageBlock>
+    <apex:commandLink value="refresh"/>
+  
+  </apex:form>
+  
+</apex:page>

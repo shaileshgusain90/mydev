@@ -1,0 +1,50 @@
+<apex:page tabStyle="account">
+
+ <link rel="stylesheet" href="http://jqueryui.com/themes/cupertino/jquery.ui.all.css"/>
+<script src="http://jqueryui.com/jquery-1.7.2.js"></script>
+    <script src="http://jqueryui.com/ui/jquery.ui.core.js"></script>
+    <script src="http://jqueryui.com/ui/jquery.ui.widget.js"></script>
+    <script src="http://jqueryui.com/ui/jquery.ui.tabs.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/demos/demos.css"/>
+
+    
+    <script language="javascript" >
+    
+     $(document).ready(function () {
+     
+      
+        $( "#tabs" ).tabs({
+            ajaxOptions: {
+                error: function( xhr, status, index, anchor ) {
+                    $( anchor.hash ).html(
+                         );
+                }
+            }
+        });
+    });
+    </script>
+    
+   
+
+ 
+<div class="demo">
+
+<div id="tabs">
+    <ul>
+    
+        <li><a href="/apex/tab1">tab1</a></li>
+        
+        <li><a href="/apex/tab2">tab2</a></li>
+        <li><a href="/apex/tab3">tab3</a></li>
+       
+       
+    </ul>
+  </div>
+
+</div><!-- End demo -->
+
+
+
+
+
+</apex:page>

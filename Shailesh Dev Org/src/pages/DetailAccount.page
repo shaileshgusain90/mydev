@@ -1,0 +1,51 @@
+<apex:page standardController="Account" extensions="dAccount">
+<script>
+function doIt(){
+
+
+      if (confirm("Are you sure you want to delete this record?"))
+           {
+           alert('thanks');
+            delit();
+                 }
+             else
+               {
+                return false;
+                      }
+   
+                   }
+                   </script>
+                    <apex:form >
+                       <apex:actionFunction name="delit" action="{!del}"/>
+                          <apex:pageBlock title="Account Detail">
+ 
+        <apex:pageBlockSection columns="2" rendered="{!$CurrentPage.parameters.id == null}">
+                 <apex:inputText value="{!Account.name}"/>
+                    <apex:inputfield value="{!Account.phone}"/>
+                         <apex:inputText value="{!Account.Billingcity}"/>
+                              <apex:inputfield value="{!Account.rating}"/>
+                       <apex:inputText value="{!Account.AnnualRevenue}"/>
+              <apex:inputfield value="{!Account.AccountNumber}"/>
+         </apex:pageBlockSection>
+ 
+     
+         <apex:pageBlockSection columns="2" title="Output" rendered="{!$CurrentPage.parameters.id != null}">
+        <apex:outputText value="{!Account.name}"/>
+        <apex:outputfield value="{!Account.phone}"/>
+         <apex:outputText value="{!Account.Billingcity}"/>
+           <apex:outputfield value="{!Account.rating}"/>
+            <apex:outputText value="{!Account.AnnualRevenue}"/>
+            <apex:outputfield value="{!Account.AccountNumber}"/>
+             </apex:pageBlockSection>
+ 
+              <apex:pageBlockButtons >
+              <apex:commandButton value="save" action="{!save}"  rendered="{!$CurrentPage.parameters.id == null}"/>
+              <apex:commandButton value="Cancel" action="{!cancel}"/>
+              <apex:commandButton value="Delete" oncomplete="return doIt();"  rendered="{!$CurrentPage.parameters.id != null}"/>
+               </apex:pageBlockButtons>
+     
+
+        </apex:pageBlock>
+        </apex:form>
+ 
+      </apex:page>

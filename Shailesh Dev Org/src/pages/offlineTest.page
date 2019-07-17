@@ -1,0 +1,53 @@
+<apex:page standardController="Account" extensions="RedirectExtentions" showHeader="false" sidebar="false" standardStylesheets="false"
+    docType="html-5.0" manifest="/apex/Manifest" id="pgid"> 
+  
+    
+   <link rel="stylesheet" href="{!URLFOR($Resource.lite, '/sqlite/styles/ExercisePage3StyleSheet.css')}"/>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+ 
+ <form id="mycontact">
+ <fieldset>
+    <legend>Your details</legend>
+ 
+         <ol>
+ 
+                                  <li>
+ 
+                                         <label for="username">Name</label>
+ 
+   <input id="username" type="text" placeholder="First and last name"   pattern=" "/>
+ 
+                        <input type="hidden" id="id"/>
+ 
+                                  </li>
+ 
+                                  <li>
+ 
+                                         <label for="useremail">Email</label>
+ 
+         <input id="useremail" type="text" placeholder="example@domain.com"  pattern=" "/>
+ 
+                                  </li>
+ 
+                           </ol>
+ 
+                     </fieldset>
+ 
+                <button id="btnReset" type="submit">Reset</button>
+ 
+                     <button id="submitButton" type="submit">SAVE</button>
+ 
+                <button id="btnUpdate" type="submit">UPDATE</button>
+ 
+                <button id="btnDrop" type="submit">DROP</button>
+ 
+              </form><br />
+ 
+        <div id="results"></div>
+
+ 
+ 
+ <apex:includeScript value="{!URLFOR($Resource.lite, '/sqlite/scripts/ExercisePage3JS.js')}"/> 
+ 
+<span style="font-family: Calibri; font-size: small;"/> 
+</apex:page>

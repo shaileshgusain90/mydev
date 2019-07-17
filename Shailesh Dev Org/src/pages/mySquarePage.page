@@ -1,0 +1,9 @@
+<apex:page controller="connectSquareUp">
+  <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockSection >
+   <apex:commandButton action="{!doit}" value="Get details"/>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

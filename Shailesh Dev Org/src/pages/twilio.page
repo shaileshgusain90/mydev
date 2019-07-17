@@ -1,0 +1,9 @@
+<apex:page controller="HelloController" showheader="false"
+  contentType="text/xml"
+  >{! '<?xml version=\"1.0\" encoding=\"UTF-8\"?>' }
+<response>
+<p><h1>hello {!name}</h1></p>
+
+</response>
+
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page controller="LeadSearch">
+  <apex:form >
+       <apex:pageBlock title="Lead Searching">
+         <apex:pageBlockSection >
+           <apex:pageBlockSectionItem >
+           <apex:outputLabel for="Search Text">Search Lead</apex:outputLabel>
+             <apex:panelGroup >
+             <apex:inputText value="{!searchText}" id="SearchText"/>
+             <apex:commandButton value="Search" action="{!doSearch}" reRender="status,Results" />
+             
+                 </apex:panelGroup>
+                 
+                 </apex:pageBlockSectionItem>
+                 </apex:pageBlockSection>
+                 <apex:pageBlockSection >
+                 <apex:pageBlockSection columns="1" title="Results" id="Results">
+                 <apex:actionStatus startText="Requesting..." id="status"/>
+                    <apex:pageBlockTable value="{!results}" rendered="{!not(isNull(Results))}" var="Lead">
+                       <apex:column value="{!Lead.Name}"/>
+                                 <apex:column value="{!Lead.phone}"/>
+                                   <apex:column value="{!Lead.Email}"/>                    
+                          </apex:pageBlockTable>
+                 
+                 </apex:pageBlockSection>
+                 </apex:pageBlockSection>
+                 
+       </apex:pageBlock>
+     </apex:form>
+ 
+ </apex:page>

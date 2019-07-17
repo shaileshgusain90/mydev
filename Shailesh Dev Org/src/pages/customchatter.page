@@ -1,0 +1,105 @@
+<apex:page controller="MyChatterController" showHeader="true">
+ <!-- <script>
+    function addComment(recId)
+    {
+    alert(recId);
+window.showModalDialog('/apex/commentpage?id='+recId ,"dialogWidth:300px; dialogHeight:200px; center:yes");
+window.parent.location.reload();
+alert(' Comment Added Successfully');
+}
+        function addLink(recId)
+        {
+          alert(recId);  
+            
+            }
+        </script> -->
+  <apex:form >
+      <apex:pageMessages />
+    <apex:sectionHeader title="My Posts" subtitle="Chatter "/>
+      <apex:pageBlock tabStyle="FEEDItem">
+      <apex:pageBlockSection title="Post To User Wall" collapsible="false">
+          <table width ="150px">
+              <tr>
+                  <td>
+                     <apex:image id="profileImage" url="{!profileImageUrl}" /> 
+                      
+                  </td>
+                 <td> <apex:outputLabel > Post To Wall:</apex:outputLabel></td>
+              
+<apex:inputText value="{!AddAFeedPost}" id="status" maxlength="200" size="50" style="padding-bottom: 6px;" />
+
+               &nbsp;&nbsp;&nbsp;   <td> <apex:commandButton value="Add A Post" action="{!AddPost}"  reRender="status,outId" /> </td>   
+</tr>
+</table>
+    </apex:pageBlockSection>
+      <!--    <apex:pageBlockSection title=" User Status Update" collapsible="false" >
+<apex:inputText value="{!UserStatus}" id="status" maxlength="600" size="40" style="padding-bottom: 6px;" />
+                  
+                 
+      <apex:commandButton value="Update Status" action="{!DoUserStatus}" />  
+</apex:pageBlockSection> -->
+          
+          <apex:pageBlockSection title="User Following" collapsible="false">
+<apex:pageBlocktable value="{!Following}" var="f">
+<B>  <apex:column value="{!f.parent.name}" headerValue="User Following list" /></B>
+</apex:pageBlocktable>
+</apex:pageBlockSection>
+          
+     <apex:pageblockSection title="User Followers" collapsible="false">
+<apex:pageblockTable value="{!Followers}" var="f">
+<apex:column value="{!f.subscriber.name}"  headerValue="Followers List"/>          
+</apex:pageblocktable>
+</apex:pageblockSection>  
+<apex:outputPanel id="outId">
+<apex:pageBlockSection columns="1" title="recent posts" id="recent" collapsible="false">
+
+
+<div class="container">
+  <div class ="row">
+     <div class = "col-md-6">
+       <apex:repeat value="{!feedItemPage.items}"    var="feedItem">
+       <div class = "media">
+        <a href ="/{!feedItem.parent.id}">
+         <img class="media-object" src ="{!feedItem.photourl}" alt ="{!feedItem.actor.name}"/>
+         </a>
+         <div class ="media-body">
+         <h4 class=   "media -heading">{!feedItem.actor.name}</h4>
+         <apex:repeat value="{!feedItem.body.messageSegments}" var="segment">
+         <apex:outputPanel layout="none" rendered="{!segment.type==TextSegementType}">
+         {!segment.text}
+         </apex:outputPanel>
+         <apex:outputPanel rendered="{!segment.type == MentionSegementType}">
+         
+         <a href ="/{!segment['record'].id}" id ="segmentId"> @{!segment['record'].name} </a>
+         
+         </apex:outputPanel>
+         </apex:repeat>
+         </div>
+         </div>
+         </apex:repeat> 
+        </div>
+        </div>
+        <hr/>
+
+</div>
+
+
+ 
+
+
+</apex:pageBlockSection> 
+</apex:outputPanel>  
+ 
+      
+      </apex:pageBlock>
+      
+      
+    
+    
+    
+    
+    </apex:form>  
+
+
+
+</apex:page>

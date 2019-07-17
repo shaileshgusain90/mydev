@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Demand Planning</value>
+    </caseValues>
+    <layouts>
+        <layout>Demand Planning Layout</layout>
+        <sections>
+            <label><!-- April --></label>
+            <section>April</section>
+        </sections>
+        <sections>
+            <label><!-- August --></label>
+            <section>August</section>
+        </sections>
+        <sections>
+            <label><!-- December --></label>
+            <section>December</section>
+        </sections>
+        <sections>
+            <label><!-- February --></label>
+            <section>February</section>
+        </sections>
+        <sections>
+            <label><!-- January --></label>
+            <section>January</section>
+        </sections>
+        <sections>
+            <label><!-- July --></label>
+            <section>July</section>
+        </sections>
+        <sections>
+            <label><!-- June --></label>
+            <section>June</section>
+        </sections>
+        <sections>
+            <label><!-- March --></label>
+            <section>March</section>
+        </sections>
+        <sections>
+            <label><!-- May --></label>
+            <section>May</section>
+        </sections>
+        <sections>
+            <label><!-- November --></label>
+            <section>November</section>
+        </sections>
+        <sections>
+            <label><!-- October --></label>
+            <section>October</section>
+        </sections>
+        <sections>
+            <label><!-- September --></label>
+            <section>September</section>
+        </sections>
+        <sections>
+            <label><!-- カスタムリンク --></label>
+            <section>カスタムリンク</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

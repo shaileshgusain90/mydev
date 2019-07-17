@@ -1,0 +1,14 @@
+<apex:page >
+
+<apex:form >
+<apex:pageBlock >
+
+<apex:pageBlockSection columns="1"><p>
+<h1>Your image has successfully upload</h1></p>
+<apex:commandLink value=" <-click here to go back"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,5 @@
+<apex:page controller="cflower" action="{!method}">
+
+test
+
+</apex:page>

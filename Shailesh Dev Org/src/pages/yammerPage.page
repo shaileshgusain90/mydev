@@ -1,0 +1,8 @@
+<apex:page >
+<!-- <apex:form >
+ <apex:pageBlock >
+<apex:commandButton action="{!createNewYammer}" value="postyammer"/> 
+<apex:commandButton action="{!login}" value="login"/>
+ </apex:pageBlock>
+ </apex:form> -->
+</apex:page>

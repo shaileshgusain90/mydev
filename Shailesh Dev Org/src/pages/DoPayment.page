@@ -1,0 +1,76 @@
+<apex:page controller="DoPaymentHandler">
+  <apex:sectionHeader title="Salesforce - Authorize.Net" subtitle="Do Payment"/>
+  <apex:form >
+      <apex:pageBlock title="Payment Details" mode="edit" >
+          <apex:pagemessages ></apex:pagemessages>
+          <apex:pageBlockSection columns="1" rendered="{!NOT(isSuccess)}">
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Amount"></apex:outputLabel>
+                 <apex:inputText value="{!amount}" id="amount"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="First Name"></apex:outputLabel>
+                 <apex:inputText value="{!firstname}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Last Name"></apex:outputLabel>
+                 <apex:inputText value="{!lastname}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Email"></apex:outputLabel>
+                 <apex:inputText value="{!email}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Address"></apex:outputLabel>
+                 <apex:inputText value="{!address}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="City"></apex:outputLabel>
+                 <apex:inputText value="{!city}"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="State/Zip"></apex:outputLabel>
+                 <apex:outputPanel >
+                     <apex:inputText value="{!state}" style="width:40px"/>
+                      <apex:inputText value="{!zip}" style="width:100px"/>
+                  </apex:outputPanel>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Card Type"></apex:outputLabel>
+                  <apex:selectList value="{!selectedCardType}" size="1">
+                      <apex:selectOptions value="{!cardTypes}" />
+                   </apex:selectList>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Cardholder Name"></apex:outputLabel>
+                 <apex:inputText value="{!cardholder}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Card Number"></apex:outputLabel>
+                 <apex:inputText value="{!cardnumber}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Expiration Date"></apex:outputLabel>
+                 <apex:outputPanel >
+                     <apex:selectList value="{!cardmonth}" size="1">
+                      <apex:selectOptions value="{!months}" />
+                     </apex:selectList>
+                     <apex:selectList value="{!cardyear}" size="1">
+                          <apex:selectOptions value="{!years}" />
+                     </apex:selectList>
+                  </apex:outputPanel>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="CVV Number"></apex:outputLabel>
+                 <apex:inputText value="{!cardcvv}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value=""></apex:outputLabel>
+                 <apex:commandButton value="Pay Now" action="{!process}"/>
+             </apex:pageBlockSectionItem>             
+           </apex:pageBlockSection>
+           
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

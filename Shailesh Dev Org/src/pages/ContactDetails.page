@@ -1,0 +1,64 @@
+<apex:page controller="ContactDetailsController" showHeader="false" id="page">
+<script>
+function myComplete()
+  {
+  location.reload();
+  }
+
+
+</script>                
+ 
+
+<apex:form >        
+<apex:actionFunction status="mycomplete" reRender="status" action="{!save}" name="myComplete"/>
+   <apex:actionFunction name="mystatus" action="{!save}" reRender="cont"  status="myStatus"/>
+      <apex:pageBlock title="hello {!$User.FirstName}">
+       <apex:pageBlockSection title="Existing Account">
+
+   <apex:selectList title="Existing Account" size="1" value="{!alist}">
+    <apex:selectOptions value="{!options}"></apex:selectOptions>
+</apex:selectList>
+</apex:pageBlockSection> 
+
+<apex:pageBlockSection columns="2" title="Contacts" id="status" >
+
+Name :<apex:inputText value="{!cname}"/>
+Phone :<apex:inputText value="{!phone}"/>
+Email:<apex:inputText value="{!Email}"/>
+<apex:outputPanel id="out">
+   
+<apex:actionstatus id="myStatus">
+  <apex:facet name="start">
+  <div style="background-color: #fbfbfb;height: 100%;opacity:0.65;width:100%;">
+  <div style="top: 74.2px; width: 91px;">
+  <img src="/img/loading.gif" title="Please Wait…" />
+  <span>Loading…</span>
+  </div>
+  </div>
+  </apex:facet>
+  </apex:actionstatus>
+  </apex:outputpanel>
+    
+</apex:pageBlockSection>
+
+<apex:pageBlockButtons location="Bottom">
+<apex:commandButton value="save" reRender="page" onclick="mystatus();" oncomplete="myComplete();"/>
+
+
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Recent Contacts">
+
+
+
+<apex:pageBlockTable value="{!Contact}" var="cn" title="Recent Contacts" id="cont">
+<apex:column value="{!cn.Name}"/>
+<apex:column value="{!cn.phone}"/>
+<apex:column value="{!cn.Email}"/>
+</apex:pageblocktable>
+   </apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form>
+
+</apex:page>

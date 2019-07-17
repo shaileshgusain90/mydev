@@ -1,0 +1,23 @@
+<apex:page controller="simpleWrapperController" showHeader="false">
+
+    <apex:form >         
+     <apex:pageBlock title="Accounts">
+     <apex:pageBlockButtons > 
+                   <apex:commandButton value="delete Accounts" action="{!deleteAll}" rerender="table"/>
+            </apex:pageBlockButtons>          
+     <apex:pageBlockTable value="{!Accounts}" var="a" id="table">   
+     
+                
+              <apex:column >                     
+                               
+              <apex:inputCheckbox value="{!a.selected}"/>                 
+              </apex:column>                 
+                             
+               <apex:column value="{!a.act.Name}" />
+                <apex:column value="{!a.act.AccountNumber}" />
+                <apex:column value="{!a.act.Phone}" />
+            </apex:pageBlockTable>
+         </apex:pageBlock>
+     </apex:form>
+     
+ </apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="DemoHIT">
+<apex:form >
+
+<apex:pageblock >
+
+<apex:commandButton title="New aws"  value="New aws" action="{!CreateHITFromREST}"/>
+</apex:pageblock>
+
+</apex:form>
+
+ 
+</apex:page>

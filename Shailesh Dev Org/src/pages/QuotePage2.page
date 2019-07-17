@@ -1,0 +1,99 @@
+<apex:page controller="QuoteClass" tabStyle="Lead"> 
+<apex:pageBlock >
+
+
+<apex:image url="/servlet/servlet.FileDownload?file=01590000002esQn"/>
+<br>Medimizer Inc.</br>
+<br>1042 North El Camino Real Suite B423</br>
+<br>Encinitas, CA 92024</br>
+<br>T:760-659-6399</br>
+<br>F:760-230-5956</br>
+<apex:outputLink >
+Sales@MediMizer.com
+</apex:outputLink>
+        </apex:pageBlock>
+        <apex:pageblock >
+        <apex:pageBlockSection >
+  <apex:pageBlockSectionItem >    
+    <div>    
+ <div style="float: left; width: 400px;background-color:blue">left Corner</div>
+ <div style="float: right; width: 400px;background-color:blue">left Corner</div>
+</div> 
+
+     </apex:pageBlockSectionItem>  
+</apex:pageBlockSection>
+  <apex:pageBlock title="conclude Table">
+  
+       <apex:pageblockTable value="{!Quotes}" var="Q">
+
+       <apex:column value="{!Q.description}" style="background-color:#339999">
+          <apex:facet name="header">
+             Description
+               </apex:facet>
+          </apex:column>
+
+       
+       <apex:column value="{!Q.totalPrice}" style="background-color:#339999">
+          <apex:facet name="header">
+           TotalPrice
+               </apex:facet>
+          </apex:column>
+          
+           <apex:column value="{!Q.Discount}" style="background-color:#339999">
+          <apex:facet name="header">
+           Discount
+               </apex:facet>
+          </apex:column>
+       
+       
+          </apex:pageblockTable>
+          
+          
+       <apex:pageblock >
+             <apex:pageBlockSection columns="2" title="Grand Total" collapsible="False">
+    
+    
+        </apex:pageBlockSection>
+    
+    
+    </apex:pageblock>      
+
+     
+
+</apex:pageblock>
+<apex:pageblockSection title="discount" columns="1" collapsible="false" >
+<div style = "font-family:merio;">    
+*”Discount if pre-paid” requires paying by check, wire, ACH or Credit Card in full before service or product is received.  Do not deduct any discounts which do not meet these terms.  Discounts deducted outside the terms will be billed and due before service or products are provided.  When paying by purchase order, do not take discount.  Please email scanned purchase orders or Fax to 760-230-5956.</div></apex:pageblockSection> 
+<apex:pageBlockSection title="Credit Cards,ACH,Wire Payments">
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Support terms and Conditions" columns="1" collapsible="False">
+  
+   
+
+
+<b>Includes:</b> 
+<div style = "font-family:merio;">                 
+<p>1.Unlimited telephone and email support to the registered licensee of the software for the duration of this agreement. Calls from outside North America must be incoming calls in most cases.</p>                  
+<p>2. Two hours per support year of web-based refresher training (not to be substituted for new user training). Unused free training does not rollover to the next support year. </p>                  
+<p>3. Support on software installed according to current MediMizer system requirements as provided by MediMizer Inc. (Mark Biomedical) in the current support year.                    
+    Support might require installation of current patches and software versions.</p>                    
+<p>4. All Maintenance Releases are provided free of charge to customers under support. For users not on MediMizer X3 (13.x), software version 12.8.8 will be provided. </p>                    
+    For users on MediMizer X3 (13.x), the current tested release will be provided. 5. Support will carry over to MediMizer X3 when purchased (for users currently on MediMizer 12 or earlier). 
+ </div>   
+   <p><b> NOT included in this agreement: </b></p>
+<apex:pageBlockSectionItem >
+                
+<div style ="float: left; width: 400px; font-family:merio; background-color:green;"><p> 1. Major version releases. (Changing from 12 to X3, 13.x to 14.x, etc.)  </p>       
+<p> 2. Add-on modules or support for modules not specifically listed.</p>                             
+<p> 3. Training other than 2 hours web training per year.</p> </div>                          
+<div style ="float: right; width: 400px;font-family:merio;"><p>4. Custom report writing.</p>  
+<p> 5. Support on any operating system, hardware or system that is not covered in MediMizer System Requirements. </p>                   
+<p> 6. Support for MediMizer 12 will end 7/31/12. Please update to MediMizer X3 before that date.</p>   </div> 
+</apex:pageBlockSectionItem>    
+                                      
+
+</apex:pageBlockSection>
+</apex:pageblock>
+</apex:page>

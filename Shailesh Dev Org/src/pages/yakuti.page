@@ -1,0 +1,9 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false"
+    docType="html-5.0" manifest="/apex/Manifest">
+
+<h1>hello this page is refer to previous page</h1>
+
+<h2>this will also be cached</h2>
+
+
+</apex:page>

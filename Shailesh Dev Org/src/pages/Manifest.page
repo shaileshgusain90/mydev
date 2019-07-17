@@ -1,0 +1,17 @@
+<apex:page contentType="text/cache-manifest" applyHtmlTag="false" 
+     standardStylesheets="false" showHeader="false">CACHE MANIFEST
+# 2012-02-21 v1.0.0
+
+#css
+{!URLFOR($Resource.css, '/css/appcache.css')}
+{!URLFOR($Resource.css, '/css/styles.css')}
+
+#images
+{!URLFOR($Resource.images,'/images/bok-choi.jpg')}
+{!URLFOR($Resource.images, '/images/teriyaki.jpg')}
+
+#js
+{!URLFOR($Resource.offlinejs, '/offline/jquery-1.4.min.js')}
+{!URLFOR($Resource.offlinejs, '/offline/offline.js')}
+
+</apex:page>

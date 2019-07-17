@@ -1,0 +1,138 @@
+[
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKlCAK"
+        },
+        "Id": "0Ad90000000XxKlCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "APPLICATION",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKqCAK"
+        },
+        "Id": "0Ad90000000XxKqCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "DOCUMENTATION",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKgCAK"
+        },
+        "Id": "0Ad90000000XxKgCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "RENDERER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKvCAK"
+        },
+        "Id": "0Ad90000000XxKvCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKbCAK"
+        },
+        "Id": "0Ad90000000XxKbCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxKWCA0"
+        },
+        "Id": "0Ad90000000XxKWCA0",
+        "AuraDefinitionBundleId": "0Ab90000000XgB5CAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgB5CAK"
+            },
+            "DeveloperName": "TestLightingApp"
+        },
+        "DefType": "STYLE",
+        "Format": "CSS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxLoCAK"
+        },
+        "Id": "0Ad90000000XxLoCAK",
+        "AuraDefinitionBundleId": "0Ab90000000XgBeCAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgBeCAK"
+            },
+            "DeveloperName": "FlipCard"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v34.0/tooling/sobjects/AuraDefinition/0Ad90000000XxOYCA0"
+        },
+        "Id": "0Ad90000000XxOYCA0",
+        "AuraDefinitionBundleId": "0Ab90000000XgBeCAK",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v34.0/tooling/sobjects/AuraDefinitionBundle/0Ab90000000XgBeCAK"
+            },
+            "DeveloperName": "FlipCard"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    }
+]

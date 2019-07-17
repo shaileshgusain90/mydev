@@ -1,0 +1,30 @@
+<apex:page controller="AccountSearch">
+
+<apex:form >
+
+<apex:inputText value="{!search}" id="a">
+<apex:actionSupport event="onkeypress" action="{!AccountSearch}" reRender="b"/>
+</apex:inputText>
+
+<apex:pageBlock >
+
+
+<apex:commandButton action="{!AccountSearch}" value="Test" />
+
+<apex:pageMessages />
+
+<apex:outputPanel id="b">
+<apex:dataTable value="{!seach}" var="a">
+<apex:column >
+<apex:facet name="Account Name">Account Name</apex:facet>
+<apex:outputText value="{!a.name}"></apex:outputText>
+</apex:column>
+
+</apex:dataTable>
+</apex:outputPanel>
+
+</apex:pageBlock> 
+</apex:form>
+
+  
+</apex:page>

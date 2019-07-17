@@ -1,0 +1,32 @@
+<apex:page controller="contactGridController" showHeader="false">
+
+ <!--jqyery -->
+
+ 
+     <apex:stylesheet value="{!URLFOR($Resource.Grid, 'Grid/jquery-ui.css')}" />
+     <apex:includeScript value="{!URLFOR($Resource.Grid, 'Grid/jquery.min.js')}" />  
+     <apex:includeScript value="{!URLFOR($Resource.Grid, 'Grid/jquery-ui.min.js')}" />
+ 
+     <apex:stylesheet value="{!URLFOR($Resource.Grid, 'Grid/pqgrid.min.css')}"/>
+     <apex:includeScript value="{!URLFOR($Resource.Grid, 'Grid/pqgrid.min.js')}"/> 
+  
+      <script type="text/javascript">
+         $(function(){
+         alert('hello');
+    
+             var obj = { width:700, height:400, title:"Grid From Array" };
+            obj.colModel = [{title:"Num", width :100,dataType:"string"},{ title: "ID", width: 200, dataType: "string" },
+            { title: "Name", width: 200, dataType: "string" }];
+             obj.dataModel = { data: data };
+             $("#grid_array").pqGrid(obj);
+             
+            });
+    
+    
+     </script> 
+     
+     <apex:form >
+     <div id="grid_array"></div>
+     <apex:commandButton value="BTNNN" />
+     </apex:form> 
+ </apex:page>

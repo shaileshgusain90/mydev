@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>shailesh.gusain.sfdc@gmail.com</contactEmail>
+    <contactPhone>07827099742</contactPhone>
+    <label>test</label>
+    <oauthConfig>
+        <callbackUrl>https://gusainshailesh.ap1.visual.force.com/apex/calender</callbackUrl>
+        <consumerKey>3MVG9Y6d_Btp4xp5tCBxOI0DreU5AovldDYmPmMK_HESFO4GydE1dzOq8vrJM16FAtHGFOif6CJiZQpt3IcsT</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

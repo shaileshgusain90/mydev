@@ -1,0 +1,18 @@
+<apex:page controller="AccountCon" tabStyle="Account">
+
+  <apex:form >
+    <apex:pageBlock title="Account Details" mode="Edit">
+        <apex:pageBlockSection >
+          Name: <apex:inputtext value="{!name}"/>
+            Phone: <apex:inputtext value="{!phone}"/>
+              Industry: <apex:inputtext value="{!industry}"/>
+        
+        </apex:pageBlockSection>
+                 <apex:pageblockButtons >
+                 <apex:commandButton value="save" action="{!save}"/>
+                 
+                 </apex:pageblockButtons> 
+                 
+      </apex:pageBlock>
+      </apex:form>
+      </apex:page>

@@ -1,0 +1,13 @@
+<apex:page controller="leadT">
+    <apex:form >
+       <apex:pageBlock title="Lead Add">
+      <p> First Name :        <apex:inputText value="{!FirstName}"/> </p>
+       <p>Last Name  :        <apex:inputText value="{!LastName}"/></p>
+       <p>Company Name:       <apex:inputText value="{!CompanyName}"/></p>
+   <p>   Email Address:       <apex:inputText value="{!Email}"/></p>
+         <apex:commandButton value="save" action="{!save}"/>
+             
+           
+            </apex:pageBlock>
+     </apex:form>
+ </apex:page>

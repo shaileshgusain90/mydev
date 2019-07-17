@@ -1,0 +1,22 @@
+<apex:page controller="sampleCon">
+  <apex:form >
+    <apex:selectList value="{!country}" multiselect="false" size="1">
+     <apex:selectOptions value="{!items}"/>
+     <apex:actionSupport event="onchange" rerender="out1,out2"/>
+   </apex:selectList>
+
+    <apex:pageBlock >  
+      <apex:pageBlockSection id="out1" >
+        <apex:pageBlockSectionItem rendered="{!IF(country == 'None', false , true)}">
+          Customize your input Text1 <apex:inputtext ></apex:inputtext>
+        </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        
+        <apex:pageBlockSection id="out2" >
+        <apex:pageBlockSectionItem rendered="{!IF(country == 'None', false , true)}">
+          Customize your input Text2 <apex:inputtext ></apex:inputtext>
+        </apex:pageBlockSectionItem>
+      </apex:pageBlockSection>
+     </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,6 @@
+<apex:page controller="MyCont" tabStyle="Account">
+ <apex:pageBlock title="hello {!$User.FirstName}">
+ this is your new page {!Account.name}
+    </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Contact (Support) Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- LinkedIn member --></label>
+            <section>LinkedIn member</section>
+        </sections>
+        <sections>
+            <label><!-- Linkedin Company --></label>
+            <section>Linkedin Company</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

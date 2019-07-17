@@ -1,0 +1,6 @@
+<apex:page controller="stringParser">
+ <apex:form > 
+  <apex:inputFile value="{!contentFile}" filename="{!nameFile}" /> 
+  <apex:commandButton action="{!parse}" value="Read File" id="theButton"/> 
+ </apex:form>
+</apex:page>
