@@ -39,7 +39,7 @@ public String Industry2{
     
     public PageReference save(){
 
-        
+        system.debug('IIII');
         ac1.Name =  Name;
         ac1.Phone =  phone;
         ac1.Industry = industry;
